@@ -1,10 +1,10 @@
-# Monerepay API Demo Application
+# Block API Demo Application
 
-A full-stack demonstration of secure integration with Monerepay's cryptocurrency vault management API.
+A full-stack demonstration of secure integration with Block's cryptocurrency vault management API.
 
 ## Features
 
-- **Secure Authentication**: Backend implementation of HMAC-SHA256 signing for Monerepay API.
+- **Secure Authentication**: Backend implementation of HMAC-SHA256 signing for Block API.
 - **Proxy Architecture**: Frontend never exposes API secrets; all requests are proxied through Node.js.
 - **Modern UI**: Built with React, Vite, and TailwindCSS.
 - **Dockerized**: specific containers for backend and frontend.
@@ -12,7 +12,7 @@ A full-stack demonstration of secure integration with Monerepay's cryptocurrency
 ## Prerequisites
 
 - [Docker](https://www.docker.com/) and Docker Compose
-- Monerepay API Credentials (`API_KEY`, `Secret`, `Passphrase`)
+- Block API Credentials (`API_KEY`, `Secret`, `Passphrase`)
 
 ## Setup & Running
 
@@ -31,7 +31,7 @@ A full-stack demonstration of secure integration with Monerepay's cryptocurrency
    MONGODB_URI=mongodb://mongodb:27017/vaultody_demo
    JWT_SECRET=supersecretvaultodydemo
    ```
-   Edit `.env` and fill in your Monerepay credentials.
+   Edit `.env` and fill in your Block credentials.
 
 3. **Run with Docker**
    From the root directory:
