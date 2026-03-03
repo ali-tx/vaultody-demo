@@ -23,6 +23,13 @@ A full-stack demonstration of secure integration with Monerepay's cryptocurrency
    ```bash
    cd backend
    cp .env.example .env
+   PORT=3001
+   VAULTODY_BASE_URL=https://rest.vaultody.com
+   VAULTODY_API_KEY=***
+   VAULTODY_API_SECRET=***
+   VAULTODY_PASSPHRASE=***@
+   MONGODB_URI=mongodb://mongodb:27017/vaultody_demo
+   JWT_SECRET=supersecretvaultodydemo
    ```
    Edit `.env` and fill in your Monerepay credentials.
 
