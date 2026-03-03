@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: vaultody-backend
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./backend/.env
+    environment:
+      - PORT=3001
+    depends_on:
+      - mongodb
+    networks:
+      - vaultody-net
+
+  frontend:
+    build: ./frontend
+    container_name: vaultody-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - vaultody-net
+
+  mongodb:
+    image: mongo:latest
+    container_name: vaultody-mongodb
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - vaultody-net
+
+volumes:
+  mongodb_data:
+
+networks:
+  vaultody-net:
+    driver: bridge
